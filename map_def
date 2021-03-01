@@ -1,0 +1,68 @@
+ORB3670_2
+000    Pixel latitude (j) min
+000    Pixel latitude max  (parametres a 0 pour toutes les latitudes)
+00     Pixel longitude min
+00     Pixel longitude max  (parametres a 0 pour toutes les longitudes)
+99      Trace d'une seule courbe (A)
+0      Superposition du champ de vent ou autre champ de vecteurs (indiquer le niveau, 0 si non)
+0      Facteur de translation vers la gauche pour les cartes trop grandes
+-1     Valeur limite minimale de trace (0  si l'on ne veut que les valeurs strictement positives)
+0      Limite haute en microns pour une bande de longueur d'onde (0. si un seul spectel) (B)
+0      Trace de la topographie sur la carte
+1      Affichage a l'ecran (0) ou sauvegarde PS (1)
+
+(A)
+- 0 >> carte perso 
+- 41 >> diagnostic nuage OMEGA (bande a 1.5 microns)
+- nombre >> reflectance pure pour une longueur d'onde (en microns) ou une bande de longueur d'onde 
+- 50 >> albedo + topographie
+- 51 >> diagnostic nuage niveau de bleu (Wang and Ingersoll)
+- 91 >> red
+- 92 >> blue
+- 93 >> green
+- 95 >> black and white
+- 99 >> true color composition - affichage ecran possible 
+- 999 >> true color composition (24 bits interface)  
+
+(B)
+- si (A) est au-dessus de 90, ce parametre est une correction de luminosite (+/- 100)
+
+
+
+ORB1201_3
+000    Pixel latitude (j) min
+000    Pixel latitude max  (parametres a 0 pour toutes les latitudes)
+
+
+ORB0351_3
+400    Pixel latitude (j) min
+700    Pixel latitude max  (parametres a 0 pour toutes les latitudes)
+10     Pixel longitude min
+100     Pixel longitude max  (parametres a 0 pour toutes les longitudes)
+0 41 51 99      Trace d'une seule courbe (A)
+0      Superposition du champ de vent ou autre champ de vecteurs (indiquer le niveau, 0 si non)
+3      Facteur de translation vers la gauche pour les cartes trop grandes
+0 -1     Valeur limite minimale de trace (0  si l'on ne veut que les valeurs strictement positives)
+0      Limite haute en microns pour une bande de longueur d'onde (0. si un seul spectel) (B)
+0 1      Trace de la topographie sur la carte
+1      Affichage a l'ecran (0) ou sauvegarde PS (1)
+
+
+ORB0371_3
+540 550    Pixel latitude (j) min
+790 811    Pixel latitude max  (parametres a 0 pour toutes les latitudes)
+00     Pixel longitude min
+70     Pixel longitude max  (parametres a 0 pour toutes les longitudes)
+41 51 99      Trace d'une seule courbe (A)
+0      Superposition du champ de vent ou autre champ de vecteurs (indiquer le niveau, 0 si non)
+3      Facteur de translation vers la gauche pour les cartes trop grandes
+-170 0 -1     Valeur limite minimale de trace (0  si l'on ne veut que les valeurs strictement positives)
+0      Limite haute en microns pour une bande de longueur d'onde (0. si un seul spectel) (B)
+1      Trace de la topographie sur la carte
+1      Affichage a l'ecran (0) ou sauvegarde PS (1)
+
+
+ORB1201_3
+600 750 600 400    Pixel latitude (j) min
+900 1050 900 900    Pixel latitude max  (parametres a 0 pour toutes les latitudes)
+

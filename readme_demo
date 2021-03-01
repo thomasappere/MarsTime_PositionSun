@@ -1,0 +1,21 @@
+Example : OMEGA picture of Olympus Mons
+
+1. you must have IDL installed. 
+the routines work with the demo version : http://www.ittvis.com/idl/
+
+2. get the OMEGA ORB0501_4.QUB and ORB0501_4.NAV files from the
+ESA Planetary Science Archive website : 
+http://www.rssd.esa.int/index.php?project=PSA 
+(see for example the map-based user interface)
+
+3. put these files in the OMEGA files location (see SOFT03/omega_path)
+
+4. start idl and type the command line '.r map'
+
+5. ... image is processed ... wait for the 'Done !' message, then exit IDL
+
+6. see the image : ORB0501_4carte8_VIS_color.ps
+
+A.Spiga
+09/2006
+spiga@lmd.jussieu.fr

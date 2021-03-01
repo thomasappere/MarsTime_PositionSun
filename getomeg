@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# use getomeg 1 5 3 7 2
+
+wget ftp://psa.esac.esa.int/pub/mirror/MARS-EXPRESS/OMEGA/MEX-M-OMEGA-2-EDR-FLIGHT-V1.0/DATA/GEM${1}${2}/ORB${1}${2}${3}${4}_${5}.NAV
+wget ftp://psa.esac.esa.int/pub/mirror/MARS-EXPRESS/OMEGA/MEX-M-OMEGA-2-EDR-FLIGHT-V1.0/DATA/ORB${1}${2}/ORB${1}${2}${3}${4}_${5}.QUB
+
+wget ftp://psa.esac.esa.int/pub/mirror/MARS-EXPRESS/OMEGA/MEX-M-OMEGA-2-EDR-FLIGHT-EXT1-V1.0/DATA/GEM${1}${2}/ORB${1}${2}${3}${4}_${5}.NAV
+wget ftp://psa.esac.esa.int/pub/mirror/MARS-EXPRESS/OMEGA/MEX-M-OMEGA-2-EDR-FLIGHT-EXT1-V1.0/DATA/ORB${1}${2}/ORB${1}${2}${3}${4}_${5}.QUB

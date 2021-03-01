@@ -1,0 +1,42 @@
+a tool for OMEGA cartography
+- visible images
+- reflectance maps
+- cloud detection
+
+
+; ** installation
+run the prep script : command line 'prep' or './prep'  
+(NB : you will have to indicate your OMEGA files location)
+
+; ** run
+map parameters are in map_def (edit before running)
+main idl routine is map.pro (in IDL command line simply type '.r map')
+
+
+; ** to do list :
+- include all the OMEGA visible spectels in the RGB computation
+- allow to continue mapping (with modified parameters) without reloading cubes
+
+
+; ** IMPORTANT
+These routines helped the main scientific project i was working
+on, but are not really part of it. So please be very indulgent, and 
+consider you may find better routines elsewhere. 
+
+- don't hesitate to ask help if problems appear while using the files
+- any suggestion is welcome 
+- let me know if you write any improvements to the routines
+- please do not send the files to another person : ask him to contact me 
+
+Have fun ! I would be glad if you find these files useful.
+
+
+: ** NOTE
+Thanks to the OMEGA team for the soft03.zip package
+
+
+Sept 2006
+A.Spiga - Laboratoire de Météorologie Dynamique
+spiga@lmd.jussieu.fr
+
+
