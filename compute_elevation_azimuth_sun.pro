@@ -49,7 +49,7 @@ endif
 ;Enter time of acquisition in UTC
 ;time=[year, month, day, hour, minute, seconde]
 ;By default
-time=[1976., 1., 1., 0., 0., 0.]
+time=[1976, 1, 1, 0, 0, 0]
 READ, year, PROMPT='Year='
 READ, month, PROMPT='Month='
 READ, day, PROMPT='Day='
