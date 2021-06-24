@@ -11,8 +11,8 @@ pro compute_elevation_azimuth_sun
 ;
 ; WARNING : need of procedure 'julian', 'find_ls', 'find_localtime'
 ;
-; EXAMPLE : 'compute_elevation_azimuth_sun' with UTC as 2012-09-21 08:03:55 >>>> LMST = 12:11:58.54, LTST=12:51:34.37
-; elevation = 75.51 degrees, azimuth = 296.94 degrees
+; EXAMPLE : 'compute_elevation_azimuth_sun' with UTC as 2012-09-21 08:03:55 >>>> LMST = 12:12:34.27, LTST=12:52:9.53
+; elevation = 75.38 degrees, azimuth = 296.74 degrees
 ;
 ; AUTHOR :
 ; Thomas Appere - October 2016
