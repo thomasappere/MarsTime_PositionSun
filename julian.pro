@@ -9,7 +9,7 @@ PRO julian, time, date
 ;
 ; REFERENCE : see mars_time.pdf
 ;
-; EXAMPLE : 'julian_v2, [1976., 1., 1., 0., 0., 0.] >>>> give localtime (and ls) corresponding to julian date 2442778.5 (value by default)
+; EXAMPLE : 'julian, [1976., 1., 1., 0., 0., 0.] >>>> returns julian date 2442778.5 (value by default) corresponding to UTC 1976/1/1 0:0:0
 ;
 ; AUTHOR :
 ; A. Spiga - May 2006
