@@ -22,7 +22,7 @@ pro compute_elevation_azimuth_sun
 ;***
 
 ;Constants
-obl = 25.1919 ; obliquity of Mars (in degree)
+obl = 25.1919 ; obliquity of the Martian orbit (in degree)
 
 mission = ''
 read, mission, prompt='Mission (MSL:1 / Mars2020:2 / Zhurong:3) : '
