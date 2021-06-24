@@ -1,4 +1,4 @@
-pro find_ls, sol, ls, julian
+pro find_ls, sol, ls, date
                                                                                                                          
 ;***
 ; PURPOSE : Find the aerocentric longitude from martian day index (sol)
@@ -34,10 +34,10 @@ epsilon = 25.1919 ; obliquity of equator to orbit (in deg)
 ; (opt) Convert Julian date to martian sol number 
 ; 	NB : martian sol date is number of sols elapsed 
 ;            since the beginning of martian year defined by Ls=0
-if (julian ne 0) then begin
+if (date ne 0) then begin
 julian_ref = 2442765.667
 	; julian_ref is a reference julian date corresponding to a Ls=0 event
-sol = (julian - julian_ref)*earth_day/martian_day 
+sol = (date - julian_ref)*earth_day/martian_day 
 sol = sol mod n_s
 endif
 
@@ -56,7 +56,7 @@ nu = 2*atan(fac*tan(ecc_anomaly/2))
 ; 4. compute ls (deg)
 ls = ((nu*180/!pi) + ls_perihelion) mod 360
 ; comparing to Mars24, this algorithm has a .1 precision
-ls = 0.1*round(ls*10)
+;ls = 0.1*round(ls*10)
 
 ;print, 'sol', sol, '  ls', ls
 

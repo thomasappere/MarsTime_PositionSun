@@ -1,18 +1,19 @@
-pro find_localtime, localtime, ls, julian, longitude
+pro find_localtime, ltst, lmst, ls, date, longitude
                     
 ;***
-; PURPOSE : Find the localtime from julian date
+; PURPOSE : Find the localtime from julian date (LTST)
 ;
 ; INPUT : a julian date and an east longitude (0 if UTC)
 ;
-; OUTPUT : a value of localtime in martian hours [0,24]
-;	   a value of Ls in degrees [0,360]
+; OUTPUT : a value of LTST in martian hours
+;          a value of LMST in martian hours [0,24]
+;	       a value of Ls in degrees [0,360]
 ;
 ; REFERENCE : see mars_time.pdf
 ;
 ; WARNING : need of procedure 'find_ls'
 ;
-; EXAMPLE : 'find_localtime, localtime, ls, 2442765.667, 41.5' >>>> give localtime (and ls) corresponding to julian date at 41.5° east longitude	
+; EXAMPLE : 'find_localtime, ltst, lmst, ls, 2442765.667, 41.5' >>>> give localtime (and ls) corresponding to julian date at 41.5 degrees east longitude	
 ;
 ; AUTHOR :
 ; A. Spiga - May 2006
@@ -32,15 +33,13 @@ epsilon = 25.1919 ; obliquity of equator to orbit (in deg)
 jd_ref = 2442778.5
 lmt_ref = 16.1725
 ; 2. Local mean time at longitude 0 in martian hours for a given julian date 
-lmt0 = (lmt_ref + 24*(julian - jd_ref)*earth_day/martian_day) mod 24
+lmt0 = (lmt_ref + 24*(date - jd_ref)*earth_day/martian_day) mod 24
 ; 3. Equation of time EOT in martian hours, for a given aerocentric solar longitude date Ls
-find_ls, sol, ls, julian
-eot = (2*e*sin(ls - ls_perihelion)-sin(2*ls)*(tan(epsilon/2))^2)*24 / (2*!pi)
-; 4. Local true solar time at longitude 0 in martian hours
-ltst0 = lmt0 - eot
+find_ls, sol, ls, date
+eot = (2*e*sin((ls - ls_perihelion)*!pi/180.)-sin(2*ls*!pi/180.)*(tan(epsilon*!pi/(2*180.)))^2)*24 / (2*!pi)
+;4 Local mean solar time at longitude lonE in martian hours
+lmst = (lmt0 + longitude/15) mod 24
 ; 5. Local true solar time at longitude lonE in martian hours
-ltst = (ltst0 + longitude/15) mod 24
-
-localtime = ltst
+ltst = lmst - eot
 
 end

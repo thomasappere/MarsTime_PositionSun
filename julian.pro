@@ -1,6 +1,21 @@
 PRO julian, time, date
 
-;                                Calcul de la date julian
+;***
+; PURPOSE : Find the julian date from time in UTC
+;
+; INPUT : time in UTC as a list [year, month, day, hour, minute, seconde]
+;
+; OUTPUT : value the julian date
+;
+; REFERENCE : see mars_time.pdf
+;
+; EXAMPLE : 'julian_v2, [1976., 1., 1., 0., 0., 0.] >>>> give localtime (and ls) corresponding to julian date 2442778.5 (value by default)
+;
+; AUTHOR :
+; A. Spiga - May 2006
+; from Fortran routines by E. Millour - April 2006
+; March 2009: modification by Thomas Appere: parameters in double-precision
+;***
 
 month = [0,31,59,90,120,151,181,212,243,273,304,334]
 
@@ -58,10 +73,13 @@ IF time[0] LT 1968 THEN BEGIN
     
 ENDIF
 
-date = 2.4398565d6+double(nday)+time[3]/2.4d1+time[4]/1.44d3+time[5]/8.64d4
+a=2.4398565d6
+b=double(nday)
+c=time[3]/2.4d1
+d=time[4]/1.44d3
+e=time[5]/8.64d4
+date=a+b+c+d+e
 
-
-Print, date, format='(F12.4)'
-
+;Print, date, format='(F12.4)'
 
 END
