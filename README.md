@@ -1,15 +1,15 @@
 # MarsTime_PositionSun
-Compute Martian local time and position of the Sun for a given UTC.
+These programs computes __Martian local time__ and __position of the Sun__ (elevation and azimuth) for a given position (latitude/longitude) and UTC.
 
-Programs available both in Python and IDL.
+Programs are available both in Python and IDL.
 
-For Python, download kepler.py package.
+* For Python, download kepler.py package then compute_elevation_azimuth_sun.py. Simply execute compute_elevation_azimuth_sun.py on Python. It asks the landing site (MSL, Perseverance, Zhurong) then the UTC. You can add an option to ask for another position in latitude/longitude.
 
-For IDL, here is a description of the subroutines:
+* For IDL, here is a description of the subroutines:
 
-find_localtime.pro
+	* find_localtime.pro
 
-	>> local time retrieval
+		* local time retrieval
 	
 find_ls.pro
 
